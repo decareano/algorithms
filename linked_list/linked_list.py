@@ -21,9 +21,10 @@ class LinkedList(object):
 
     def insert(self, data):
         new_node = Node(data)
+	
         new_node.set_next(self.head)
         self.head = new_node
-
+        
     def size(self):
         current = self.head
         count = 0
@@ -60,3 +61,10 @@ class LinkedList(object):
             self.head = current.get_next()
         else:
             previous.set_next(current.get_next())
+
+new_list = LinkedList()
+new_list = [3,4,5]
+print(new_list.insert(10, 18))
+print(len(new_list))
+print(new_list.search(4))
+print(new_list)
